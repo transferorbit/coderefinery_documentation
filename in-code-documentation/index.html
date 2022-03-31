@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>In-code documentation &mdash; Code documentation lesson  documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/togglebutton.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/mystnb.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/sphinx_lesson.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/sphinx_rtd_theme_ext_color_contrast.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/tabs.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/clipboard.min.js"></script>
+        <script src="../_static/copybutton.js"></script>
+        <script src="../_static/minipres.js"></script>
+        <script>let toggleHintShow = 'Click to show';</script>
+        <script>let toggleHintHide = 'Click to hide';</script>
+        <script>let toggleOpenOnPrint = 'true';</script>
+        <script src="../_static/togglebutton.js"></script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex/" />
+    <link rel="search" title="Search" href="../search/" />
+    <link rel="next" title="Writing good README files" href="../writing-readme-files/" />
+    <link rel="prev" title="Popular tools and solutions" href="../tools/" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../" class="icon icon-home"> Code documentation lesson
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">The lesson</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../wishlist/">Motivation and wishlist</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tools/">Popular tools and solutions</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">In-code documentation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#exercise-writing-good-comments">Exercise - Writing good comments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#writing-docstrings-in-python">Writing docstrings in python</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#exercise-adding-in-code-documentation">Exercise: Adding in-code documentation</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../writing-readme-files/">Writing good README files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sphinx/">Sphinx and Markdown</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../gh_workflow/">Deploying Sphinx documentation to GitHub Pages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../gh-pages/">Hosting websites/homepages on GitHub Pages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../summary/">Summary</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Reference</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../exercises/">List of exercises</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide/">Instructor guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../license/">Credit and license</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../">Code documentation lesson</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../" class="icon icon-home"></a> &raquo;</li>
+      <li>In-code documentation</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/coderefinery/documentation/blob/main/content/in-code-documentation.md" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section class="tex2jax_ignore mathjax_ignore" id="in-code-documentation">
+<span id="id1"></span><h1>In-code documentation<a class="headerlink" href="#in-code-documentation" title="Permalink to this headline"></a></h1>
+<div class="admonition-questions questions admonition" id="questions-0">
+<p class="admonition-title">Questions</p>
+<ul class="simple">
+<li><p>What can I do to make my code more easily understandable?</p></li>
+<li><p>What information should go into comments?</p></li>
+<li><p>What are docstrings and what information should go into docstrings?</p></li>
+</ul>
+</div>
+<div class="admonition-objectives objectives admonition" id="objectives-0">
+<p class="admonition-title">Objectives</p>
+<ul class="simple">
+<li><p>Write docstrings according to best practices</p></li>
+<li><p>Know where and when to put comments</p></li>
+</ul>
+</div>
+<p>In this episode we will learn how to write good documentation inside your code.</p>
+<section id="exercise-writing-good-comments">
+<h2>Exercise - Writing good comments<a class="headerlink" href="#exercise-writing-good-comments" title="Permalink to this headline"></a></h2>
+<div class="admonition-in-code-1-comments exercise important admonition" id="exercise-0">
+<p class="admonition-title">In-code-1: Comments</p>
+<p>Let’s take a look at two example comments (comments in python start with <code class="docutils literal notranslate"><span class="pre">#</span></code>):</p>
+<p><strong>Comment A</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Now we check if temperature is larger then -50:</span>
+<span class="k">if</span> <span class="n">temperature</span> <span class="o">&gt;</span> <span class="o">-</span><span class="mi">50</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;do something&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>Comment B</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># We regard temperatures below -50 degrees as measurement errors</span>
+<span class="k">if</span> <span class="n">temperature</span> <span class="o">&gt;</span> <span class="o">-</span><span class="mi">50</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;do something&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Which of these comments is best? Can you explain why?</p>
+</div>
+<div class="admonition-solution solution important dropdown admonition" id="solution-0">
+<p class="admonition-title">Solution</p>
+<p>Comment A describes <strong>what</strong> happens in this piece of code,
+whereas comment B describes <strong>why</strong> this piece of code is there, i.e. its <strong>purpose</strong>.
+Comments in the form of B are much more useful, comments of form A are redundant and we should avoid them.</p>
+</div>
+<div class="admonition-callout callout admonition" id="callout-0">
+<p class="admonition-title">Callout</p>
+<p>Do not use comments for:</p>
+<p><strong>Keeping zombie code</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Do not run this code!:</span>
+<span class="c1"># if temperature &gt; 0:</span>
+<span class="c1">#     print(&#39;It is warm&#39;)</span>
+</pre></div>
+</div>
+<p>Instead: just remove the code, you can always find it back in a previous version of your code in git.</p>
+<p><strong>Replacing git</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># removed on August 5</span>
+<span class="c1"># if() ...</span>
+<span class="c1"># Now it connects to the API with o-auth2, updated 05/05/2016</span>
+</pre></div>
+</div>
+<p>Instead: use git to keep track of different versions of your code.</p>
+</div>
+</section>
+<section id="writing-docstrings-in-python">
+<h2>Writing docstrings in python<a class="headerlink" href="#writing-docstrings-in-python" title="Permalink to this headline"></a></h2>
+<p>Let’s look at the following function:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">mean_temperature</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
+    <span class="n">temperatures</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;Air temperature (degC)&#39;</span><span class="p">]</span>
+    <span class="k">return</span> <span class="nb">sum</span><span class="p">(</span><span class="n">temperatures</span><span class="p">)</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">temperatures</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>It computes the mean temperature for a given dataset.
+How can we make it clearer what this function does and how to use it?</p>
+<p>We can add a <strong>docstring</strong> (the string in between the two <code class="docutils literal notranslate"><span class="pre">&quot;&quot;&quot;</span></code>):</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">mean_temperature</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Get the mean temperature</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        data (pandas.DataFrame): A pandas dataframe with air temperature measurements.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        The mean air temperature (float)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">temperatures</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;Air temperature (degC)&#39;</span><span class="p">]</span>
+    <span class="k">return</span> <span class="nb">float</span><span class="p">(</span><span class="nb">sum</span><span class="p">(</span><span class="n">temperatures</span><span class="p">)</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">temperatures</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>A docstring is a structured comment associated to a segment of code (i.e. function or class)</p>
+<p>Good docstrings describe:</p>
+<ul class="simple">
+<li><p>What the function does</p></li>
+<li><p>What goes in (including the type of the input variables)</p></li>
+<li><p>What goes out (including the return type)</p></li>
+</ul>
+<p>In python there are several styles that describe how docstrings should be formatted.
+Here we use <a class="reference external" href="https://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_google.html">Google style docstrings</a>.</p>
+<p>Python parses docstrings, for example calling the <code class="docutils literal notranslate"><span class="pre">help</span></code> function will display it:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">help</span><span class="p">(</span><span class="n">mean_temperature</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Python will print this help text:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Help</span> <span class="n">on</span> <span class="n">function</span> <span class="n">mean_temperature</span> <span class="ow">in</span> <span class="n">module</span> <span class="n">__main__</span><span class="p">:</span>
+
+<span class="n">mean_temperature</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+    <span class="n">Get</span> <span class="n">the</span> <span class="n">mean</span> <span class="n">temperature</span>
+
+    <span class="n">Args</span><span class="p">:</span>
+        <span class="n">data</span> <span class="p">(</span><span class="n">pandas</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">):</span> <span class="n">A</span> <span class="n">pandas</span> <span class="n">dataframe</span> <span class="k">with</span> <span class="n">air</span> <span class="n">temperature</span> <span class="n">measurements</span><span class="o">.</span>
+
+    <span class="n">Returns</span><span class="p">:</span>
+        <span class="n">The</span> <span class="n">mean</span> <span class="n">air</span> <span class="n">temperature</span> <span class="p">(</span><span class="nb">float</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>It is common to write docstrings for functions, classes, and modules.</p>
+<div class="admonition-script-docstrings callout admonition" id="callout-1">
+<p class="admonition-title">Script docstrings</p>
+<p>You can also add a <strong>structured</strong> docstring at the top of a script to document what the script does and how to run it.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;Prints information about the mean air temperature.</span>
+
+<span class="sd">Usage:</span>
+<span class="sd"> ./temperature.py</span>
+
+<span class="sd">Author:</span>
+<span class="sd"> Sven van der Burg - 2021-03-2021</span>
+<span class="sd">&quot;&quot;&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="admonition-small-effort-large-gain callout admonition" id="callout-2">
+<p class="admonition-title">Small effort, large gain.</p>
+<p>Writing docstrings makes you generate your documentation as you are generating the code!</p>
+</div>
+<section id="exercise-adding-in-code-documentation">
+<h3>Exercise: Adding in-code documentation<a class="headerlink" href="#exercise-adding-in-code-documentation" title="Permalink to this headline"></a></h3>
+<div class="admonition-in-code-2-add-in-code-documentation exercise important admonition" id="exercise-1">
+<p class="admonition-title">In-code-2: add in-code documentation</p>
+<p>Update this code snippet so it is well-documented:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="k">def</span> <span class="nf">x</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">print_columns</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+   <span class="n">b</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+   <span class="n">column_headers</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">b</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">values</span><span class="p">)</span>
+   <span class="k">if</span> <span class="n">print_columns</span><span class="p">:</span>
+       <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">column_headers</span><span class="p">))</span>
+   <span class="k">return</span> <span class="n">column_headers</span>
+</pre></div>
+</div>
+</div>
+<div class="admonition-solution solution important dropdown admonition" id="solution-1">
+<p class="admonition-title">Solution</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="k">def</span> <span class="nf">get_spreadsheet_columns</span><span class="p">(</span><span class="n">file_loc</span><span class="p">,</span> <span class="n">print_columns</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+   <span class="sd">&quot;&quot;&quot;Gets and prints the spreadsheet&#39;s header columns</span>
+<span class="sd">   Args:</span>
+<span class="sd">       file_loc (str): The file location of the spreadsheet</span>
+<span class="sd">       print_columns (bool, optional) : A flag used to print the columns to the console (default is False)</span>
+<span class="sd">   Returns:</span>
+<span class="sd">       a list of strings used that are the header columns</span>
+<span class="sd">   &quot;&quot;&quot;</span>
+   <span class="n">file_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="n">file_loc</span><span class="p">)</span>
+   <span class="n">column_headers</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">file_data</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">values</span><span class="p">)</span>
+   <span class="k">if</span> <span class="n">print_columns</span><span class="p">:</span>
+       <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">column_headers</span><span class="p">))</span>
+   <span class="k">return</span> <span class="n">column_headers</span>
+</pre></div>
+</div>
+</div>
+<div class="admonition-naming-is-documentation callout admonition" id="callout-3">
+<p class="admonition-title">Naming <strong>is</strong> documentation.</p>
+<p>Giving explicit, descriptive names to your code segments (functions, classes, variables) already provides very useful
+and important documentation. In practice you will find that for simple functions it is unnecessary to add a docstring
+when the function name and variable names already give enough information.</p>
+</div>
+<div class="admonition-keypoints keypoints admonition" id="keypoints-0">
+<p class="admonition-title">Keypoints</p>
+<ul class="simple">
+<li><p>Comments should describe the why for your code not the what.</p></li>
+<li><p>Writing docstrings is an easy way to write documentation while you type code.</p></li>
+</ul>
+</div>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../tools/" class="btn btn-neutral float-left" title="Popular tools and solutions" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../writing-readme-files/" class="btn btn-neutral float-right" title="Writing good README files" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2021, CodeRefinery team.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
